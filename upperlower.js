@@ -1,12 +1,12 @@
-let style = process.argv[2];                    // Get names from console.
-let string = process.argv[3];  
+let style = process.argv[2];                    // get function for lower or upper
+let string = process.argv[3];                   // get string
 
-if(style === "upper"){
+if(style === "upper"){                          // modify and print string accordingly
     string = string.toUpperCase();
     console.log(string);
 }else if(style === "lower"){
     string = string.toLowerCase();
     console.log(string);
 }else {
-    console.log("Choose 'upper' for upper case and 'lower' for lower case.");
+    console.log("Syntax: upperlower.js [upper/lower] ['your string']");
 }
