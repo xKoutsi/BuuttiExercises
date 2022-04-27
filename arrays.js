@@ -8,11 +8,11 @@ arr.push("sipuli");                 // Add sipuli to array
 arr.shift();                        // remove the first item on array
 console.log(arr);
 
-arr.forEach(element => {
+arr.forEach(element => {            // print each element with forEach
     console.log(element);
 });
 
-arr.forEach(element => {
+arr.forEach(element => {            // Print each element containing letter r using forEach
     if(element.includes("r")){
         console.log(element);
     }
