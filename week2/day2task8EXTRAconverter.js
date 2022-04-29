@@ -27,7 +27,7 @@ function baseToDec(){
             /* Converts DEC to any base */
 function decToBase(){
     while (decNumber > 0) {
-        let baseModulo = numberToLetter[decNumber%toBase]                       // left over decimal number is divided by desired baseNumber every loop
+        let baseModulo = numberToLetter[decNumber%toBase];                      // left over decimal number is divided by desired baseNumber every loop
         baseNumber = baseModulo+baseNumber;                                     // and left over modulo is added in front of the baseNumber string that
         decNumber = (decNumber-decNumber%toBase)/toBase;                        // can be printed later.
     }
@@ -39,8 +39,8 @@ for (let index = 0; index < number.length; index++) {                           
     figureOnIndex = letterToNumber[number[number.length-1-index]];
     if(figureOnIndex >= fromBase){
         //throw new Error("Number is not valid in "+fromBase+" base.");           // Throw error, if number is not valid.
-        console.log("Number is not valid in "+fromBase+" base.")
-        process.exit()
+        console.log("Number is not valid in "+fromBase+" base.");
+        process.exit();
     }    
 }
 
