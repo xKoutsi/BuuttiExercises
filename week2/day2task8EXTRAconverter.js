@@ -4,10 +4,10 @@ let number = process.argv[4];
 
 fromBase = parseInt(fromBase);
 toBase = parseInt(toBase);
-number = number.toUpperCase();
+number = number.toUpperCase();                      // Switching string to upper case so it will accept upper and lower case characters.
 
-let decNumber = 0;
-let baseNumber = "";
+let decNumber = 0;                                  // This has to be decimal number as it can only contain numbers
+let baseNumber = "";                                // This has to be string as it can contain characters from A-Z and numbers from 0-9.
 
             /* Array for letters to numbers */
 const letterToNumber = {0 : 0, 1 : 1, 2 : 2, 3 : 3, 4 : 4, 5 : 5 , 6 : 6, 7 : 7, 8 : 8, 9 : 9, A : 10, B : 11, C : 12, D : 13, E : 14, F : 15, G :16, H : 17, I : 18, J : 19, K : 20, L : 21, M : 22, N : 23, O : 24, P : 25, Q : 26, R :27, S : 28, T : 29, U : 30, V : 31, W : 32, X : 33, Y : 34, Z : 35};
@@ -22,16 +22,16 @@ function baseToDec(){
         exponentiation = exponentiation * fromBase;                             // updates exponentiation for next figure
         // console.log(figureOnIndex);   
     }
-    console.log(decNumber);
+    
 }
             /* Converts DEC to any base */
 function decToBase(){
     while (decNumber > 0) {
-        let baseModulo = numberToLetter[decNumber%toBase]
-        baseNumber = baseModulo+baseNumber;
-        decNumber = (decNumber-decNumber%toBase)/toBase;
+        let baseModulo = numberToLetter[decNumber%toBase]                       // left over decimal number is divided by desired baseNumber every loop
+        baseNumber = baseModulo+baseNumber;                                     // and left over modulo is added in front of the baseNumber string that
+        decNumber = (decNumber-decNumber%toBase)/toBase;                        // can be printed later.
     }
-    console.log(baseNumber);
+    
     
 }
         /* Different cases */
@@ -41,9 +41,12 @@ if (fromBase > 36 || toBase > 36){
     console.log("Both base numbers are the same. Your number will not convert.")
 }else if(fromBase === 10){
     decToBase();
+    console.log(baseNumber);
 }else if(toBase === 10){
     baseToDec();
+    console.log(decNumber);
 }else{
     baseToDec();
     decToBase();
+    console.log(baseNumber);
 }
