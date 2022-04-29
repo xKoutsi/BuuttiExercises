@@ -34,8 +34,18 @@ function decToBase(){
     
     
 }
+for (let index = 0; index < number.length; index++) {                           // Checks if given number is possible with fromBase
+    let figureOnIndex = 0;
+    figureOnIndex = letterToNumber[number[number.length-1-index]];
+    if(figureOnIndex >= fromBase){
+        //throw new Error("Number is not valid in "+fromBase+" base.");           // Throw error, if number is not valid.
+        console.log("Number is not valid in "+fromBase+" base.")
+        process.exit()
+    }    
+}
+
         /* Different cases */
-if (fromBase > 36 || toBase > 36){
+if (fromBase > 36 || toBase > 36 || fromBase < 2 || toBase < 2){
     console.log("Either base number is invalid. Choose base number between 1 and 36.")
 }else if(fromBase === toBase){
     console.log("Both base numbers are the same. Your number will not convert.")
