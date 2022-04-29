@@ -69,7 +69,7 @@ for (let index = 0; index < number.length; index++) {                           
 
         /* Different cases */
 if (fromBase > 36 || toBase > 36 || fromBase < 2 || toBase < 2){
-    console.log("Either base number is invalid. Choose base number between 1 and 36.")
+    console.log("Either base number is invalid. Choose base number between 2 and 36.")
 }else if(fromBase === toBase){
     console.log("Both base numbers are the same. Your number will not convert.")
 }else if(fromBase === 10){
