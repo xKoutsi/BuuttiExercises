@@ -1,10 +1,33 @@
 let fromBase = process.argv[2];                     // get bases and number from console
 let toBase = process.argv[3];    
 let number = process.argv[4];
+fromBase = fromBase.toUpperCase();    
+toBase = toBase.toUpperCase();    
+
+if (fromBase === "DEC"){                            // Added function that most commonly known numeral systems can be written
+    fromBase = 10;
+}else if(fromBase === "BIN"){
+    fromBase = 2;
+}else if(fromBase === "HEX"){
+    fromBase = 16;
+}else if(fromBase === "OCT"){
+    fromBase = 8;
+}
+
+if (toBase === "DEC"){                              // Added function that most commonly known numeral systems can be written
+    toBase = 10;
+}else if(toBase === "BIN"){
+    toBase = 2;
+}else if(toBase === "HEX"){
+    toBase = 16;
+}else if(toBase === "OCT"){
+    toBase = 8;
+}
 
 fromBase = parseInt(fromBase);
 toBase = parseInt(toBase);
 number = number.toUpperCase();                      // Switching string to upper case so it will accept upper and lower case characters.
+
 
 let decNumber = 0;                                  // This has to be decimal number as it can only contain numbers
 let baseNumber = "";                                // This has to be string as it can contain characters from A-Z and numbers from 0-9.
