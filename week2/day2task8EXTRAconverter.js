@@ -23,9 +23,8 @@ function baseToDec(){
         // console.log(figureOnIndex);   
     }
     console.log(decNumber);
-    return decNumber;
 }
-
+            /* Converts DEC to any base */
 function decToBase(){
     while (decNumber > 0) {
         let baseModulo = numberToLetter[decNumber%toBase]
@@ -35,7 +34,7 @@ function decToBase(){
     console.log(baseNumber);
     
 }
-
+        /* Different cases */
 if (fromBase > 36 || toBase > 36){
     console.log("Either base number is invalid. Choose base number between 1 and 36.")
 }else if(fromBase === toBase){
