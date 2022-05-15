@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.item {
+    background-color: greenyellow;
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-width: 2px;
+}
+.container2 {
+    display: flex;
+    justify-content: flex-start;
+}
+.item2 {
+    background-color: red;
+    height: 100px;
+    border-style: solid;
+    border-width: 2px;
+}
+#one {
+    width: 15%;
+}
+#four {
+    width: 40%;
+}
